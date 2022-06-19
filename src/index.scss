@@ -1,0 +1,32 @@
+@import '~normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100&display=swap');
+@font-face {
+  font-family: 'Trebuchet MS';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Trebuchet MS'), url('../src/fonts/trebuc.woff') format('woff');
+  }
+  
+body {
+  background: url(../src/images/background.png) repeat repeat center;
+
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+h1, 
+h2, 
+h3, 
+h4, 
+p {
+  margin: 0;
+  padding: 0;
+}
+html, 
+body, 
+#root {
+  width: 100%;
+  height: 100%;
+}

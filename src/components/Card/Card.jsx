@@ -31,20 +31,22 @@ function Card({state, description, filling, count, give, weight, id}) {
   return (
     <div id={styles[`${id}`]} className={styles.container}>
       <div className={styles['card-container']}>
-        <div onMouseOver={hoverFunc} onMouseLeave={msFunc} onClick={changeState} className={`${styles.card} ${styles[`${cardState}`]}`}>
-          <div className={`${styles['card-text']} ${styles[`${cardText}`]}`}>
-            <span className={styles['text-disable']}>Сказочное заморское яство</span>
-            <span className={styles['text-show']}>
-              Котэ не одобряет ?
-            </span>
-            <h2>Нямушка</h2>
-            <h3>с {filling}</h3>
-            <span>{count}</span>
-            <span>{give}</span>
-          </div>
-          <div className={styles.weight}>
-            <span>{weight}</span>
-            <span>КГ</span>
+        <div onMouseOver={hoverFunc} onMouseLeave={msFunc} onClick={changeState}  className={`${styles['card-border']} ${styles[`${cardState}`]}`}>
+          <div className={styles.card}>
+            <div className={`${styles['card-text']} ${styles[`${cardText}`]}`}>
+              <span className={styles['text-disable']}>Сказочное заморское яство</span>
+              <span className={styles['text-show']}>
+                Котэ не одобряет ?
+              </span>
+              <h2>Нямушка</h2>
+              <h3>с {filling}</h3>
+              <span>{count}</span>
+              <span>{give}</span>
+            </div>
+            <div className={styles.weight}>
+              <span>{weight}</span>
+              <span>КГ</span>
+            </div>
           </div>
         </div>
         <CardDescription 

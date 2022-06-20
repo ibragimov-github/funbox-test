@@ -8,91 +8,104 @@
     height: 509px;
     display: flex;
     flex-direction: column;
-    .card {
-      position: relative;
+    .card-border {
       width: 100%;
       height: 480px;
-      .show {
-        .text-show {
-          display: inline !important;
-          color: #E62E7A;
-          font-size: 21px;
-          line-height: 18.58px;
+      z-index: 101;
+      padding: 4px;
+      .card {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: url(../../images/cat.png) no-repeat no-repeat center, url(../../images/svg/Back.svg) no-repeat no-repeat center;
+        .show {
+          .text-show {
+            display: inline !important;
+            color: #E62E7A;
+            font-size: 21px;
+            line-height: 18.58px;
+          }
+          .text-disable {
+            display: none;
+          }
         }
-        .text-disable {
-          display: none;
+        .card-text {
+          width: 211px;
+          height: 154px;
+          position: absolute;
+          left: 48px;
+          top: 21px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          * {
+            font-family: 'Trebuchet MS';
+          }
+          span {
+            color: #666666;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16px;
+          }
+          h2 {
+            color: #000;
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 55.73px;
+          }
+          h3 {
+            color: #000;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 27.87px;
+          }
+          .text-show {
+            display: none;
+          }
         }
-      }
-      .card-text {
-        width: 211px;
-        height: 154px;
-        position: absolute;
-        left: 48px;
-        top: 21px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        * {
+        .weight {
+          position: absolute;
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          right: 16px;
+          bottom: 16px;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
           font-family: 'Trebuchet MS';
-        }
-        span {
-          color: #666666;
-          font-size: 14px;
+          font-size: 21px;
           font-weight: 400;
-          line-height: 16px;
+          line-height: 22px;
         }
-        h2 {
-          color: #000;
-          font-size: 48px;
-          font-weight: 700;
-          line-height: 55.73px;
-        }
-        h3 {
-          color: #000;
-          font-size: 24px;
-          font-weight: 700;
-          line-height: 27.87px;
-        }
-        .text-show {
-          display: none;
-        }
-      }
-      .weight {
-        position: absolute;
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        right: 16px;
-        bottom: 16px;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        font-family: 'Trebuchet MS';
-        font-size: 21px;
-        font-weight: 400;
-        line-height: 22px;
       }
     }
+
     .inactive {
       cursor: pointer;
-      background: url(../../images/svg/background-card.svg) no-repeat no-repeat center;
-      &:hover {background: url(../../images/svg/background-card__hover.svg) no-repeat no-repeat center;}
+      background: url(../../images/svg/Border.svg) no-repeat no-repeat center;
+      &:hover {
+        background: url(../../images/svg/Border-hover.svg) no-repeat;
+      }
       .weight {
         background-color: #2EA8E6;
       }
     }
     .active {
+      background: url(../../images/svg/Border-active.svg);
+      &:hover {
+        background: url(../../images/svg/Border-active__hover.svg);
+      }
       cursor: pointer;
-      background: url(../../images/svg/background-select.svg);
-      &:hover {background: url(../../images/svg/background-select__hover.svg);}
+      
       .weight {
         background-color: #D91667;
       }
     }
     .disabled {
-      background: url(../../images/svg/background-disabled.svg);
+      background: url(../../images/svg/Border-disabled.svg);
       .card-text * {
         color: #B3B3B3 !important;
       }

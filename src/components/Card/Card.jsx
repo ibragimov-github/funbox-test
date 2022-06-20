@@ -51,6 +51,7 @@ function Card({state, description, filling, count, give, weight, id}) {
           changeCardFunc={changeState} 
           description={description} 
           state={cardState}
+          filling={filling}
         />
       </div>
     </div>

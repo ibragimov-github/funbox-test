@@ -5,7 +5,7 @@ function CardDescription({state, description, changeCardFunc, filling}) {
   if (state === 'inactive') {
     return (
       <span className={styles.text}>
-        Чего сидишь? Порадуй котэ, <span className={styles.blue}>купи</span>
+        Чего сидишь? Порадуй котэ, <span onClick={changeCardFunc} className={styles.blue}>купи</span>
       </span>
     )
   }

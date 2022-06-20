@@ -1,14 +1,16 @@
 import React from 'react';
 import styles from './CardDescription.module.scss';
 
-function CardDescription({state, changeState, description}) {
+function CardDescription({state, description, changeCardFunc}) {
   if (state === 'inactive') {
-    return(
-      <span className={styles.text}>Чего Сидишь? Порадуй котэ, <span onClick={changeState} className={styles.blue}>купи</span></span>
+    return (
+      <span className={styles.text}>
+        Чего сидишь? Порадуй котэ, <span className={styles.blue}>купи</span>
+      </span>
     )
   }
   if (state === 'active') {
-    return (
+    return(
       <span className={styles.text}>{description}</span>
     )
   }
